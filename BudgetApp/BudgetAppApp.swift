@@ -12,6 +12,9 @@ struct BudgetAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //making the coredata manager to be accessible in our content view
+                .environment(\.managedObjectContext, CoreDateManager.shared.viewContext)
+            
         }
     }
 }
