@@ -12,6 +12,37 @@ struct AddBudgetCategoryView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var title: String = ""
     @State private var total: Double = 100
+    @State private var messages: [String] = []
+    
+    //Adding validation
+    var isFormValid: Bool {
+        //if the form is valid we first remove all the error messages and then we perform validation
+        messages.removeAll()
+        
+        if title.isEmpty {
+            messages.append("Title is required")
+        }
+       
+        if total <= 0 {
+            messages.append("Total should be greater than 1")
+        }
+        
+        return messages.count == 0
+    }
+    
+    private func save() {
+        //sending the data to the core data.
+       let budgetCategory =  BudgetCategory(context: viewContext)
+        budgetCategory.name = title
+        budgetCategory.total = total
+        
+        do {
+            try viewContext.save()
+        }catch {
+            print(error.localizedDescription)
+        }
+        
+    }
     
     var body: some View {
         NavigationStack{
@@ -26,8 +57,14 @@ struct AddBudgetCategoryView: View {
                     Text("$500")
                 }
                 
-                Text("$\(total)")
+                Text(total as NSNumber, formatter: NumberFormatter.currency)
+                //adding the frame so that we can center it.
+                    .frame(maxWidth: .infinity, alignment: .center)
                 
+                ForEach(messages, id: \.self){message in
+                    Text(message)
+                    
+                }
                 
             }.toolbar {
                 ToolbarItem(placement: .navigationBarLeading){
@@ -38,7 +75,10 @@ struct AddBudgetCategoryView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button("Save"){
-                        
+                        if isFormValid {
+                            save()
+                        }
+                       
                     }
                 }
            
