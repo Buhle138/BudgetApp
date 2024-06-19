@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9455340B2C22FAEB00C99A45 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9455340A2C22FAEB00C99A45 /* NumberFormatter.swift */; };
 		949DB82F2C1E49B900D22813 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DB82E2C1E49B900D22813 /* CoreDataManager.swift */; };
 		949DB8322C1E4DE100D22813 /* AddBudgetCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DB8312C1E4DE100D22813 /* AddBudgetCategoryView.swift */; };
 		94D930702C1E418F00E83400 /* BudgetAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9306F2C1E418F00E83400 /* BudgetAppApp.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9455340A2C22FAEB00C99A45 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		949DB82E2C1E49B900D22813 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		949DB8312C1E4DE100D22813 /* AddBudgetCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetCategoryView.swift; sourceTree = "<group>"; };
 		94D9306C2C1E418F00E83400 /* BudgetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		945534092C22FAC900C99A45 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9455340A2C22FAEB00C99A45 /* NumberFormatter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		949DB82D2C1E499100D22813 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +86,7 @@
 		94D9306E2C1E418F00E83400 /* BudgetApp */ = {
 			isa = PBXGroup;
 			children = (
+				945534092C22FAC900C99A45 /* Extensions */,
 				949DB8302C1E4DC300D22813 /* Views */,
 				949DB82D2C1E499100D22813 /* Managers */,
 				94D930802C1E447C00E83400 /* Models */,
@@ -178,6 +189,7 @@
 				94D930842C1E457100E83400 /* BudgetCategory+CoreDataClass.swift in Sources */,
 				949DB8322C1E4DE100D22813 /* AddBudgetCategoryView.swift in Sources */,
 				949DB82F2C1E49B900D22813 /* CoreDataManager.swift in Sources */,
+				9455340B2C22FAEB00C99A45 /* NumberFormatter.swift in Sources */,
 				94D9307F2C1E42EA00E83400 /* BudgetModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
