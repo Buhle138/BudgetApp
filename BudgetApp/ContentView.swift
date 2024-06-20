@@ -18,10 +18,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack{
             VStack {
-                List(budgetCategoryResults) {budgetCategory in
-                    Text(budgetCategory.name ?? "")
-                    
-                }
+             BudgetListView(budgetCategoryResults: budgetCategoryResults)
             }
             .sheet(isPresented: $isPresented, content: {
                 AddBudgetCategoryView()

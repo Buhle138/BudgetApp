@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9455340B2C22FAEB00C99A45 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9455340A2C22FAEB00C99A45 /* NumberFormatter.swift */; };
+		9455342D2C24656C00C99A45 /* BudgetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9455342C2C24656C00C99A45 /* BudgetListView.swift */; };
 		949DB82F2C1E49B900D22813 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DB82E2C1E49B900D22813 /* CoreDataManager.swift */; };
 		949DB8322C1E4DE100D22813 /* AddBudgetCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DB8312C1E4DE100D22813 /* AddBudgetCategoryView.swift */; };
 		94D930702C1E418F00E83400 /* BudgetAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9306F2C1E418F00E83400 /* BudgetAppApp.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		9455340A2C22FAEB00C99A45 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		9455342C2C24656C00C99A45 /* BudgetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListView.swift; sourceTree = "<group>"; };
 		949DB82E2C1E49B900D22813 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		949DB8312C1E4DE100D22813 /* AddBudgetCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetCategoryView.swift; sourceTree = "<group>"; };
 		94D9306C2C1E418F00E83400 /* BudgetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				949DB8312C1E4DE100D22813 /* AddBudgetCategoryView.swift */,
+				9455342C2C24656C00C99A45 /* BudgetListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94D930722C1E418F00E83400 /* ContentView.swift in Sources */,
+				9455342D2C24656C00C99A45 /* BudgetListView.swift in Sources */,
 				94D930702C1E418F00E83400 /* BudgetAppApp.swift in Sources */,
 				94D930842C1E457100E83400 /* BudgetCategory+CoreDataClass.swift in Sources */,
 				949DB8322C1E4DE100D22813 /* AddBudgetCategoryView.swift in Sources */,
