@@ -14,11 +14,30 @@ struct ContentView: View {
     @FetchRequest(sortDescriptors: []) private var budgetCategoryResults:
     FetchedResults<BudgetCategory>
     @State private var isPresented: Bool = false
+    
+    var total: Double {
+        budgetCategoryResults.reduce(0) { result, budgetCategory in
+            return result + budgetCategory.total
+        }
+    }
 
     var body: some View {
         NavigationStack{
             VStack {
-             BudgetListView(budgetCategoryResults: budgetCategoryResults)
+                
+                Text(total as NSNumber, formatter: NumberFormatter.currency)
+                    .fontWeight(.bold)
+                
+                //deleting that specific object from the SQLite database.
+                BudgetListView(budgetCategoryResults: budgetCategoryResults, onDeleteBudgetCategory: {budgetCategory in
+                    viewContext.delete(budgetCategory)
+                    do{
+                        try viewContext.save()
+                    }catch {
+                        print(error)
+                    }
+                    
+                })
             }
             .sheet(isPresented: $isPresented, content: {
                 AddBudgetCategoryView()
